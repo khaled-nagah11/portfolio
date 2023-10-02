@@ -26,7 +26,7 @@ body{
 }
 section{
     min-height: 100vh;
-    padding: 10rem 9% 2rem;
+    padding: 10rem 9% 10rem;
 }
     /* header section style */
 .header{
@@ -132,6 +132,7 @@ span{
 
     /* about section style */
 .about{
+    min-height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1037,6 +1038,8 @@ span{
         width: 65%;
         height: 100%;
     }
+    .home{
+        flex-direction: column;
 }
 @media screen and (max-width: 768px){
     #menu-icon{
@@ -1063,8 +1066,7 @@ span{
         margin: 3rem 0;
         text-align: center;
     }
-    .home{
-        flex-direction: column;
+
     }
     .home-content h3{
         font-size: 2.6rem;
