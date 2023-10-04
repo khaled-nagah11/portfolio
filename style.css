@@ -14,15 +14,103 @@
     --bg-colore: #1f242d;
     --second-bg-colore: #323946;
     --text-colore: #fff;
-    --main-colore: #0ef
+    --main-colore: #0effff
 }
 html{
     font-size: 60%;
-    overflow-x: hidden;
 }
 body{
     background: var(--bg-colore);
     color: var(--text-colore);
+    overflow: hidden;
+}
+/* preloader landing bage style */
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #191420 2%, #002025 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.loader-circle {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+    margin-left: -60px;
+    margin-top: -60px;
+    animation: fade 1.2s infinite ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loader-line-mask {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    width: 60px;
+    height: 120px;
+    margin-left: -60px;
+    margin-top: -60px;
+    overflow: hidden;
+    transform-origin: 60px 60px;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    animation: rotate 1.5s infinite linear;
+}
+.loader-line-mask .loader-line {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    border: 2px solid;
+    color: var(--main-colore);
+}
+.preloader-img{
+    width: 75px;
+    height: 75px;
+}
+@keyframes rotate {
+    0% {
+    transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.25;
+    }
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* end the style of breloader */
+/* scrollbar style */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--bg-colore);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-colore);
+    border-radius: 4px;
 }
 section{
     min-height: 100vh;
@@ -60,7 +148,7 @@ section{
     color: var(--main-colore);
 }
 #menu-icon{
-    font-size: 3.6rem;
+    font-size: 4rem;
     color: var(--text-colore);
     display: none;
 }
@@ -1195,7 +1283,7 @@ span{
         text-align: center;
     }
     .home-img img{
-        width: 100vw;
+        width: 100%;
     }
     .home-content h1{
         font-size: 4.6rem;
