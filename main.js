@@ -64,8 +64,6 @@ function togglePopup3(){
 }
 
 
-
-
 /*================== swiper tastmonial and popup screen =====================*/
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
@@ -93,6 +91,40 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+/*==================preloader landing page style =====================*/ 
+window.addEventListener('load', () => {
+  // Add a delay of 3 seconds  before hiding the loader
+  setTimeout(() => {
+      const loader = document.querySelector('.loader-wrapper');
+      const content = document.querySelector('.landing-page-content');
+
+      loader.style.display = 'none';
+      content.style.display = 'block';
+  }, 3000);
+});
+// visible scrollbar after 3 second
+setTimeout(function() {
+  document.body.style.overflow = 'visible';
+}, 3000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
