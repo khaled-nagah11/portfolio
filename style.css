@@ -105,7 +105,7 @@ body{
 /* end the style of breloader */
 /* scrollbar style */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 7px;
     background-color: var(--bg-colore);
 }
 ::-webkit-scrollbar-thumb {
